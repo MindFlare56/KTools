@@ -31,7 +31,7 @@ class Tools {
             return builtModel
         }
 
-        fun loadDatabaseProperties(name: String): Properties {
+        fun getDatabaseProperties(name: String): Properties {
             val classLoader = Thread.currentThread().contextClassLoader
             val properties = Properties()
             try {
