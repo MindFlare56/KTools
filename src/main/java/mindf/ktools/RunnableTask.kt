@@ -1,3 +1,5 @@
+package mindf.ktools
+
 import java.util.*
 
 abstract class RunnableTask(private val message: String = "Task complete", private val displayProgress: Boolean = true) : Runnable {

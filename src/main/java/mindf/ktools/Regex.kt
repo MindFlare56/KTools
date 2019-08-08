@@ -1,3 +1,5 @@
+package mindf.ktools
+
 class Regex {
 
     companion object {

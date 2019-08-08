@@ -1,3 +1,5 @@
+package mindf.ktools
+
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -120,89 +122,89 @@ class DateTime {
 
         fun isDateBetween(inputDate: String, startingDate: String, endingDate: String): Boolean {
             val milliSecondsInputDate = java.lang.Double.parseDouble(
-                getADateMilliSeconds(
-                    inputDate
-                )
+                    getADateMilliSeconds(
+                            inputDate
+                    )
             )
             val milliSecondsStartingDate = java.lang.Double.parseDouble(
-                getADateMilliSeconds(
-                    startingDate
-                )
+                    getADateMilliSeconds(
+                            startingDate
+                    )
             )
             val milliSecondsEndingDate = java.lang.Double.parseDouble(
-                getADateMilliSeconds(
-                    endingDate
-                )
+                    getADateMilliSeconds(
+                            endingDate
+                    )
             )
             return milliSecondsInputDate in milliSecondsStartingDate..milliSecondsEndingDate
         }
 
         fun isDateSmallerOrEquals(inputDate: String, comparedDate: String): Boolean {
             val milliSecondsInputDate = java.lang.Double.parseDouble(
-                getADateMilliSeconds(
-                    inputDate
-                )
+                    getADateMilliSeconds(
+                            inputDate
+                    )
             )
             val milliSecondsComparedDate = java.lang.Double.parseDouble(
-                getADateMilliSeconds(
-                    comparedDate
-                )
+                    getADateMilliSeconds(
+                            comparedDate
+                    )
             )
             return milliSecondsInputDate <= milliSecondsComparedDate
         }
 
         fun isDateAfter(inputDate: String, comparedDate: String): Boolean {
             val milliSecondsInputDate = java.lang.Double.parseDouble(
-                getADateMilliSeconds(
-                    inputDate
-                )
+                    getADateMilliSeconds(
+                            inputDate
+                    )
             )
             val milliSecondsComparedDate = java.lang.Double.parseDouble(
-                getADateMilliSeconds(
-                    comparedDate
-                )
+                    getADateMilliSeconds(
+                            comparedDate
+                    )
             )
             return milliSecondsInputDate > milliSecondsComparedDate
         }
 
         fun isDateHigherOrEquals(inputDate: String, comparedDate: String): Boolean {
             val milliSecondsInputDate = java.lang.Double.parseDouble(
-                getADateMilliSeconds(
-                    inputDate
-                )
+                    getADateMilliSeconds(
+                            inputDate
+                    )
             )
             val milliSecondsComparedDate = java.lang.Double.parseDouble(
-                getADateMilliSeconds(
-                    comparedDate
-                )
+                    getADateMilliSeconds(
+                            comparedDate
+                    )
             )
             return milliSecondsInputDate >= milliSecondsComparedDate
         }
 
         fun isDateBefore(inputDate: String, comparedDate: String): Boolean {
             val milliSecondsInputDate = java.lang.Double.parseDouble(
-                getADateMilliSeconds(
-                    inputDate
-                )
+                    getADateMilliSeconds(
+                            inputDate
+                    )
             )
             val milliSecondsComparedDate = java.lang.Double.parseDouble(
-                getADateMilliSeconds(
-                    comparedDate
-                )
+                    getADateMilliSeconds(
+                            comparedDate
+                    )
             )
             return milliSecondsInputDate < milliSecondsComparedDate
         }
 
         fun isDateEquals(inputDate: String, comparedDates: String): Boolean {
             val milliSecondsInputDate = java.lang.Double.parseDouble(
-                getADateMilliSeconds(
-                    inputDate
-                )
+                    getADateMilliSeconds(
+                            inputDate
+                    )
             )
             val milliSecondsComparedDate = java.lang.Double.parseDouble(
-                getADateMilliSeconds(
-                    comparedDates
-                )
+                    getADateMilliSeconds(
+                            comparedDates
+                    )
             )
             return milliSecondsInputDate == milliSecondsComparedDate
         }
@@ -216,60 +218,60 @@ class DateTime {
 
         fun isAfterCurrentDate(stringDate: String): Boolean {
             val milliSecondsCurrentDate = java.lang.Double.parseDouble(
-                getADateMilliSeconds(
-                    getCurrentStringDate()
-                )
+                    getADateMilliSeconds(
+                            getCurrentStringDate()
+                    )
             )
             val milliSecondsStringDate = java.lang.Double.parseDouble(
-                getADateMilliSeconds(
-                    stringDate
-                )
+                    getADateMilliSeconds(
+                            stringDate
+                    )
             )
             return milliSecondsStringDate > milliSecondsCurrentDate
         }
 
         fun isAfterCurrentDate(millisecondsDate: Long): Boolean {
             val milliSecondsCurrentDate = java.lang.Double.parseDouble(
-                getADateMilliSeconds(
-                    getCurrentStringDate()
-                )
+                    getADateMilliSeconds(
+                            getCurrentStringDate()
+                    )
             )
             return millisecondsDate > milliSecondsCurrentDate
         }
 
         fun isBeforeCurrentDate(stringDate: String): Boolean {
             val milliSecondsCurrentDate = java.lang.Double.parseDouble(
-                getADateMilliSeconds(
-                    getCurrentStringDate()
-                )
+                    getADateMilliSeconds(
+                            getCurrentStringDate()
+                    )
             )
             val milliSecondsStringDate = java.lang.Double.parseDouble(
-                getADateMilliSeconds(
-                    stringDate
-                )
+                    getADateMilliSeconds(
+                            stringDate
+                    )
             )
             return milliSecondsStringDate < milliSecondsCurrentDate
         }
 
         fun isBeforeCurrentDate(millisecondsDate: Long): Boolean {
             val milliSecondsCurrentDate = java.lang.Double.parseDouble(
-                getADateMilliSeconds(
-                    getCurrentStringDate()
-                )
+                    getADateMilliSeconds(
+                            getCurrentStringDate()
+                    )
             )
             return millisecondsDate < milliSecondsCurrentDate
         }
 
         fun isEqualsCurrentDate(stringDate: String): Boolean {
             val milliSecondsCurrentDate = java.lang.Double.parseDouble(
-                getADateMilliSeconds(
-                    getCurrentStringDate()
-                )
+                    getADateMilliSeconds(
+                            getCurrentStringDate()
+                    )
             )
             val milliSecondsStringDate = java.lang.Double.parseDouble(
-                getADateMilliSeconds(
-                    stringDate
-                )
+                    getADateMilliSeconds(
+                            stringDate
+                    )
             )
             return milliSecondsStringDate == milliSecondsCurrentDate
         }
@@ -280,46 +282,46 @@ class DateTime {
 
         fun isAfterOrEqualsCurrentDate(stringDate: String): Boolean {
             val milliSecondsCurrentDate = java.lang.Double.parseDouble(
-                getADateMilliSeconds(
-                    getCurrentStringDate()
-                )
+                    getADateMilliSeconds(
+                            getCurrentStringDate()
+                    )
             )
             val milliSecondsStringDate = java.lang.Double.parseDouble(
-                getADateMilliSeconds(
-                    stringDate
-                )
+                    getADateMilliSeconds(
+                            stringDate
+                    )
             )
             return milliSecondsStringDate >= milliSecondsCurrentDate
         }
 
         fun isAfterOrEqualsCurrentDate(millisecondsDate: Long): Boolean {
             val milliSecondsCurrentDate = java.lang.Double.parseDouble(
-                getADateMilliSeconds(
-                    getCurrentStringDate()
-                )
+                    getADateMilliSeconds(
+                            getCurrentStringDate()
+                    )
             )
             return millisecondsDate >= milliSecondsCurrentDate
         }
 
         fun isBeforeOrEqualsCurrentDate(stringDate: String): Boolean {
             val milliSecondsCurrentDate = java.lang.Double.parseDouble(
-                getADateMilliSeconds(
-                    getCurrentStringDate()
-                )
+                    getADateMilliSeconds(
+                            getCurrentStringDate()
+                    )
             )
             val milliSecondsStringDate = java.lang.Double.parseDouble(
-                getADateMilliSeconds(
-                    stringDate
-                )
+                    getADateMilliSeconds(
+                            stringDate
+                    )
             )
             return milliSecondsStringDate <= milliSecondsCurrentDate
         }
 
         fun isBeforeOrEqualsCurrentDate(millisecondsDate: Long): Boolean {
             val milliSecondsCurrentDate = java.lang.Double.parseDouble(
-                getADateMilliSeconds(
-                    getCurrentStringDate()
-                )
+                    getADateMilliSeconds(
+                            getCurrentStringDate()
+                    )
             )
             return millisecondsDate <= milliSecondsCurrentDate
         }
@@ -334,65 +336,65 @@ class DateTime {
 
         fun isYearValid(stringYear: String): Boolean {
             val yearBetweenCurentDate = getYearsBetweenTwoDates(
-                getCurrentYear(),
-                stringYear
+                    getCurrentYear(),
+                    stringYear
             )
             return yearBetweenCurentDate > 150
         }
 
         fun getMilliSecondsBetweenTwoDates(inputDate: String, comparedDate: String): Double {
             val milliSecondsInputDate = java.lang.Double.parseDouble(
-                getADateMilliSeconds(
-                    inputDate
-                )
+                    getADateMilliSeconds(
+                            inputDate
+                    )
             )
             val milliSecondsComparedDate = java.lang.Double.parseDouble(
-                getADateMilliSeconds(
-                    comparedDate
-                )
+                    getADateMilliSeconds(
+                            comparedDate
+                    )
             )
             return milliSecondsInputDate - milliSecondsComparedDate
         }
 
         fun getDoubleDayBetweenTwoDates(inputDate: String, comparedDate: String): Double {
             val differenceInMilliSeconds =
-                getMilliSecondsBetweenTwoDates(inputDate, comparedDate)
+                    getMilliSecondsBetweenTwoDates(inputDate, comparedDate)
             return differenceInMilliSeconds / dayMilliseconds
         }
 
         fun getDayBetweenTwoDates(inputDate: String, comparedDate: String): Int {
             val differenceInMilliSeconds =
-                getMilliSecondsBetweenTwoDates(inputDate, comparedDate)
+                    getMilliSecondsBetweenTwoDates(inputDate, comparedDate)
             return (differenceInMilliSeconds / dayMilliseconds).toInt()
         }
 
         fun getMonthBetweenTwoDates(inputDate: String, comparedDate: String): Double {
             val differenceInMilliSeconds =
-                getMilliSecondsBetweenTwoDates(inputDate, comparedDate)
+                    getMilliSecondsBetweenTwoDates(inputDate, comparedDate)
             return Math.round(differenceInMilliSeconds / monthMilliseconds).toDouble()
         }
 
         fun getYearsBetweenTwoDates(inputDate: String, comparedDate: String): Double {
             val differenceInMilliSeconds =
-                getMilliSecondsBetweenTwoDates(inputDate, comparedDate)
+                    getMilliSecondsBetweenTwoDates(inputDate, comparedDate)
             return Math.round(differenceInMilliSeconds / yearMilliseconds).toDouble()
         }
 
         fun getHoursBetweenTwoDates(inputDate: String, comparedDate: String): Double {
             val differenceInMilliSeconds =
-                getMilliSecondsBetweenTwoDates(inputDate, comparedDate)
+                    getMilliSecondsBetweenTwoDates(inputDate, comparedDate)
             return differenceInMilliSeconds / hourMilliseconds
         }
 
         fun getMinutesBetweenTwoDates(inputDate: String, comparedDate: String): Double {
             val deferenceInMilliSeconds =
-                getMilliSecondsBetweenTwoDates(inputDate, comparedDate)
+                    getMilliSecondsBetweenTwoDates(inputDate, comparedDate)
             return deferenceInMilliSeconds / minuteMilliseconds
         }
 
         fun getSecondsBetweenTwoDates(inputDate: String, comparedDate: String): Double {
             val differenceInMilliSeconds =
-                getMilliSecondsBetweenTwoDates(inputDate, comparedDate)
+                    getMilliSecondsBetweenTwoDates(inputDate, comparedDate)
             return differenceInMilliSeconds / secondMilliseconds
         }
 
@@ -414,7 +416,7 @@ class DateTime {
             val birthDay = extractDay(birthDate)
             var age = Integer.parseInt(currentYear) - Integer.parseInt(birthYear)
             if (currentMonth == birthMonth && Integer.parseInt(birthDay) > Integer.parseInt(
-                    currentDay
+                            currentDay
                 ) || Integer.parseInt(
                     birthMonth
                 ) > Integer.parseInt(currentMonth)
@@ -426,7 +428,7 @@ class DateTime {
 
         fun isBirthDateValid(birthDate: String): Boolean {
             return isDateValid(birthDate) && isBeforeCurrentDate(
-                birthDate
+                    birthDate
             )
         }
 
@@ -444,57 +446,57 @@ class DateTime {
 
         private fun updateValue(stringDate: String, value: Int, milliseconds: Double): String {
             return milliSecondsToStringDate(
-                getStringDateMilliSeconds(
-                    stringDate
-                ) + value * milliseconds
+                    getStringDateMilliSeconds(
+                            stringDate
+                    ) + value * milliseconds
             )
         }
 
         fun updateSecond(stringDate: String, value: Int): String {
             return updateValue(
-                stringDate,
-                value,
-                secondMilliseconds
+                    stringDate,
+                    value,
+                    secondMilliseconds
             )
         }
 
         fun updateMinute(stringDate: String, value: Int): String {
             return updateValue(
-                stringDate,
-                value,
-                minuteMilliseconds
+                    stringDate,
+                    value,
+                    minuteMilliseconds
             )
         }
 
         fun updateHour(stringDate: String, value: Int): String {
             return updateValue(
-                stringDate,
-                value,
-                hourMilliseconds
+                    stringDate,
+                    value,
+                    hourMilliseconds
             )
         }
 
         fun updateDay(stringDate: String, value: Int): String {
             return updateValue(
-                stringDate,
-                value,
-                dayMilliseconds
+                    stringDate,
+                    value,
+                    dayMilliseconds
             )
         }
 
         fun updateMonth(stringDate: String, value: Int): String {
             return updateValue(
-                stringDate,
-                value,
-                monthMilliseconds
+                    stringDate,
+                    value,
+                    monthMilliseconds
             )
         }
 
         fun updateYear(stringDate: String, value: Int): String {
             return updateValue(
-                stringDate,
-                value,
-                yearMilliseconds
+                    stringDate,
+                    value,
+                    yearMilliseconds
             )
         }
 
