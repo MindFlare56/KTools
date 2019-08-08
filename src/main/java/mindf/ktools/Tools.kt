@@ -3,6 +3,8 @@ package mindf.ktools
 import com.google.gson.Gson
 import com.google.gson.JsonElement
 import org.json.JSONObject
+import java.io.IOException
+import java.util.*
 import kotlin.reflect.KClass
 import kotlin.reflect.KMutableProperty1
 import kotlin.reflect.KProperty1
@@ -27,6 +29,22 @@ class Tools {
                 builtModel.add(employee)
             }
             return builtModel
+        }
+
+        fun loadDatabaseProperties(name: String): Properties {
+            val classLoader = Thread.currentThread().contextClassLoader
+            val properties = Properties()
+            try {
+                classLoader.getResourceAsStream(name)!!.use { resourceStream ->
+                    properties.load(
+                            resourceStream
+                    )
+                }
+            } catch (e: IOException) {
+                e.printStackTrace()
+                throw IllegalArgumentException("database.properties file not found!")
+            }
+            return properties
         }
 
         @Suppress("UNCHECKED_CAST")
